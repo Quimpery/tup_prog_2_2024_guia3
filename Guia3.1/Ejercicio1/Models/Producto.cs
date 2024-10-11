@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Guia3._1
+namespace Ejercicio1.Models
 {
     internal abstract class Producto
     {
