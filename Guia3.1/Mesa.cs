@@ -11,6 +11,10 @@ namespace Guia3._1
         private double largo;
 
 
+
+
+
+
         public Mesa(string descripcion, double precioBase, int tipoMaterial, double largo) : base(descripcion, precioBase, tipoMaterial)
         {
             base.TipoMaterial = tipoMaterial;
