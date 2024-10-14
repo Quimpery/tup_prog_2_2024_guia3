@@ -11,6 +11,7 @@ namespace Ejercicio1.Models
         private string descripcion;
         protected double precioBase;
         protected int TipoMaterial;
+        public string Descripcion { get { return descripcion; }  }
 
 
         public Producto(string descripcion, double precioBase, int tipoMaterial)

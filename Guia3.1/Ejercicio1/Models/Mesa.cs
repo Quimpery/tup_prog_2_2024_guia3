@@ -10,39 +10,36 @@ namespace Ejercicio1.Models
     {
         private double largo;
 
-
-
-
-
-
         public Mesa(string descripcion, double precioBase, int tipoMaterial, double largo) : base(descripcion, precioBase, tipoMaterial)
         {
+            
             base.TipoMaterial = tipoMaterial;
             base.precioBase = precioBase;
             this.largo = largo;
         }
 
-        public override double CalcularPrecio(double precioBase,double largo,int tipoMaterial)
+        public override double CalcularPrecio()
         {
             double precioMesa = 0;
 
-            if(tipoMaterial == 0)
+            if(base.TipoMaterial == 0)
             {
-                precioMesa = (precioBase * largo)*(1+tipoMaterial);
+                precioMesa = (precioBase * largo)*(1+base.TipoMaterial*0.33);
             }
-            else if(tipoMaterial == 1)
+            else if(TipoMaterial == 1)
             {
-                precioMesa = (precioBase * largo) * (1 + tipoMaterial);
+                precioMesa = (precioBase * largo) * (1 + base.TipoMaterial*0.33);
             }
             else
             {
-                precioMesa=(precioBase * largo)*(1 + tipoMaterial);
+                precioMesa=(precioBase * largo)*(1 + base.TipoMaterial *0.33);
             }
             return precioMesa;            
         }
+
         public override string VerDetalle()
         {
-            return
+            return ("La mesa es de: " + base.Descripcion + ("Largo: " + largo + ("Su precio base es de: ") + precioBase));
         }
     }
 }
